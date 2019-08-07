@@ -125,4 +125,9 @@ RUN apt-get update \
  && dpkg -i /tmp/sawtooth-*.deb || true \
  && apt-get -f -y install
 
-CMD ["mdata-tp-go", "-vv"]
+RUN mkdir mkdir /root/.sawtooth \
+ && mkdir /root/.sawtooth/keys \
+ && echo 032e2fb41d231a5daa2b4c5bd3ccca503189f417cb6a8ab103085347232e75ec20 > /root/.sawtooth/keys/root.pub \
+ && echo b42e1f519d04becfd5080797aa4eba79ff094112df5eabad9f6047b514a80574 > /root/.sawtooth/keys/root.priv
+
+#CMD ["mdata-tp-go", "-vv"]

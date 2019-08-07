@@ -23,7 +23,7 @@ const (
 	FAMILY_VERSION       string = "1.0"
 	DISTRIBUTION_NAME    string = "sawtooth-mdata"
 	DISTRIBUTION_VERSION string = ""
-	DEFAULT_URL          string = "http://127.0.0.1:8008"
+	DEFAULT_URL          string = "http://rest-api:8008"
 	// Verbs
 	VERB_CREATE    string = "create"
 	VERB_UPDATE    string = "update"
